@@ -1,12 +1,12 @@
-import org.gradle.kotlin.dsl.invoke
-
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.example.domain"
+    namespace = "com.example.data_local"
     compileSdk = 36
 
     defaultConfig {
@@ -35,9 +35,24 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":data_repository"))
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
+    // di hilt
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.preference.ktx)
+    ksp(libs.hilt.android.compiler)
+    // Room Runtime
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    // Room Compiler (для генерации кода)
+    ksp(libs.androidx.room.compiler)
+    // DataStore
+    implementation(libs.androidx.datastore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

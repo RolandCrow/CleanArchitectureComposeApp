@@ -22,3 +22,6 @@ dependencyResolutionManagement {
 rootProject.name = "CleanArchitectureComposeApp"
 include(":app")
 include(":domain")
+include(":data_repository")
+include(":data-remote")
+include(":data-local")
