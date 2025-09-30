@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.presentation_common.navigation.PostInput
 import com.example.presentation_common.state.CommonScreen
-import com.example.presentation_post.PostModel
+import com.example.presentation_post.single.PostModel
 
 @Composable
 fun PostScreen(

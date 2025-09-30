@@ -13,9 +13,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class PostListViewModel(
+class PostListViewModel @Inject constructor(
     private val useCase: GetPostsWithUsersWithInteractionUseCase,
     private val converter: PostListConverter,
     private val updateInteractionUseCase: UpdateInteractionUseCase

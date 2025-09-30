@@ -5,7 +5,7 @@ import com.example.domain.usecase.GetPostUseCase
 import com.example.presentation_common.UiState
 import com.example.presentation_common.state.MviViewModel
 import com.example.presentation_common.state.UiSingleEvent
-import com.example.presentation_post.PostModel
+import com.example.presentation_post.single.PostModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch

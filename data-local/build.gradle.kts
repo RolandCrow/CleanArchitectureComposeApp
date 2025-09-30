@@ -46,11 +46,10 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.androidx.preference.ktx)
     ksp(libs.hilt.android.compiler)
-    // Room Runtime
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    // Room Compiler (для генерации кода)
-    ksp(libs.androidx.room.compiler)
+    // Room
+    implementation (libs.androidx.room.ktx)
+    implementation (libs.androidx.room.runtime)
+    ksp (libs.androidx.room.compiler)
     // DataStore
     implementation(libs.androidx.datastore)
     testImplementation(libs.junit)

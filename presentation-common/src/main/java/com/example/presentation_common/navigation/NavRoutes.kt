@@ -4,7 +4,6 @@ import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
-import kotlinx.serialization.StringFormat
 
 private const val ROUTE_POSTS = "posts"
 private const val ROUTE_POST = "posts/%s"
@@ -16,7 +15,7 @@ sealed class NavRoutes(
     val route: String,
     val arguments: List<NamedNavArgument> = emptyList()
 ) {
-    data object Posts: NavRoutes(ROUTE_POST)
+    data object Posts: NavRoutes(ROUTE_POSTS)
     data object Post: NavRoutes(
         route = String.format(ROUTE_POST,"{$ARG_POST_ID}"),
         arguments = listOf(navArgument(ARG_POST_ID){

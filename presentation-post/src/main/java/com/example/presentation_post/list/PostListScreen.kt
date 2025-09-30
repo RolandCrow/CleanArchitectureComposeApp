@@ -17,7 +17,7 @@ import com.example.presentation_common.state.CommonScreen
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
-fun PostListScree(
+fun PostListScreen(
     viewModel: PostListViewModel,
     navController: NavController
 ) {

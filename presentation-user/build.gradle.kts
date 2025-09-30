@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.presentation_post"
+    namespace = "com.example.presentation_user"
     compileSdk = 36
 
     defaultConfig {
